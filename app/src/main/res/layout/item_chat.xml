@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F5F8FA"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="#F5F8FA"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="85dp"
+                android:text="John Doe"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="from"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/churchsss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Meswondo Faith Church"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:src="@drawable/user" />
+
+            <ImageView
+                android:id="@+id/receivebuble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_bubble_chart_24" />
+
+            <LinearLayout
+                android:id="@+id/lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgroundd">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/chats"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/assistant"
+                            android:text="Meswondo Faith Church"
+                            android:textColor="#fff" />
+                        <io.github.ponnamkarthik.richlinkpreview.RichLinkViewSkype
+                            android:id="@+id/richLinkViews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </io.github.ponnamkarthik.richlinkpreview.RichLinkViewSkype>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="end"
+                                android:text="Time"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardreceiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="-40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/gradient_background"
+
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+
+                android:id="@+id/chatimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:adjustViewBounds="true"
+                android:baselineAligned="false"
+                android:cropToPadding="true"
+                android:scaleType="fitXY"
+             />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:drawableStart="@drawable/ic_baseline_reply_24"
+                android:id="@+id/reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:gravity="start"
+                android:text="Reply" />
+            <TextView
+                android:textSize="10sp"
+                android:textColor="#fff"
+                android:id="@+id/tim"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:gravity="start"
+                android:text="Time"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+<LinearLayout
+    android:id="@+id/lin01"
+   android:orientation="vertical"
+    android:layout_alignParentEnd="true"
+    android:layout_gravity="end"
+    android:layout_marginStart="40dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginRight="1dp"
+    android:background="@drawable/rounded_edittext"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/sender_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="10dp"
+        android:text="Sent message sample!"
+        android:textAlignment="textStart"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:layout_marginStart="30dp"
+        android:id="@+id/times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:text="Time"
+        android:textSize="10sp" />
+
+</LinearLayout>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/sentbubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/bubble" />
+
+
+        </RelativeLayout>
+        <io.github.ponnamkarthik.richlinkpreview.RichLinkViewSkype
+            android:id="@+id/richLinkView"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="-10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </io.github.ponnamkarthik.richlinkpreview.RichLinkViewSkype>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardsender"
+            android:layout_marginTop="-10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="25dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:baselineAligned="false"
+                android:cropToPadding="true"
+                android:scaleType="fitXY"
+                android:id="@+id/sender_message_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+
+          />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

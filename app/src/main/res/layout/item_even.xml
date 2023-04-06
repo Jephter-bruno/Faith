@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lin1"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    android:background="#F5F8FA"
+    >
+<LinearLayout
+    android:id="@+id/lin8"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:src="@drawable/download"
+        android:layout_height="100dp"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="60dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_baseline_access_time_24"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/times"
+                android:textColor="#483980"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:text="10:00 AM"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lindate"
+            android:layout_marginStart="50dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_baseline_calendar_today_24"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/dates"
+                android:textColor="#483980"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:text="23 march 2021"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/eventtxt"
+        android:textStyle="bold"
+        android:textColor="#233361"
+        android:layout_marginStart="60dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:text="Techno Fair 2021"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/linvenue"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="60dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_location_on_24"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/venues"
+            android:textColor="#132942"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:text="Bosto Faith Church"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/churchss"
+        android:textColor="#33353E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="Desma Mutai on behalf of the whole ministry is welcoming you all to a tecno fair to be held on 19 march 2021....."
+        android:textAlignment="center"
+        android:textSize="15sp" />
+    <LinearLayout
+        android:background="#F5F8FA"
+        android:layout_marginStart="20dp"
+        android:id="@+id/lin7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@drawable/user"
+            android:id="@+id/profiles"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linprof"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jane Doe"
+                    android:textColor="#233361"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:text=" from"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/church"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reverend"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+<View
+    android:layout_marginStart="10dp"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"/>
+</LinearLayout>

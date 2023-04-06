@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:id="@+id/lin1"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginStart="-15dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_baseline_bubble_chart_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+</LinearLayout>
+        <TextView
+            android:id="@+id/namesd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+
+            android:textSize="12sp"
+         />
+        <TextView
+
+        android:id="@+id/chat"
+        android:layout_gravity="center_horizontal"
+        android:textSize="9sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+            />
+
+        <LinearLayout
+        android:id="@+id/lin7"
+        android:gravity="center_horizontal"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:visibility="gone"
+        android:id="@+id/lin8"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_baseline_forum_24" />
+
+        <TextView
+            android:textSize="8sp"
+            android:id="@+id/topics"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Topic" />
+
+        </LinearLayout>
+        <LinearLayout
+        android:id="@+id/lin9"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_baseline_people_alt_24" />
+
+
+        <TextView
+            android:textSize="10sp"
+            android:id="@+id/invitees"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_marginTop="10dp"
+        android:fontFamily="@font/helvetica_neue"
+        android:id="@+id/join"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:text="Join Room "
+        android:background="@drawable/gradient_background"
+        android:layout_width="100dp"
+        android:layout_height="30dp"/>
+        </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+

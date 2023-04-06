@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F8FA"
+    >
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+<TextView
+
+    android:textColor="#233361"
+    android:layout_marginStart="20dp"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:layout_marginTop="60dp"
+    android:text="Express who"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="#233361"
+                    android:layout_marginStart="20dp"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:text="you are"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="#33353E"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20sp"
+                    android:text="Share your story, testimonies, questions, videos and thoughts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="#33353E"
+                    android:layout_marginStart="20dp"
+                    android:text="Let others know what God has done for you!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/banner_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:fontFamily="@font/helvetica_neue"
+                    android:textColor="#233361"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:text="What do you want to talk about?"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="8dp"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    />
+                <LinearLayout
+                    android:id="@+id/post_photo"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_baseline_add_photo_alternate_24"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#233361"
+                        android:text="Add a Photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/post_video"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/add_video"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#233361"
+                        android:gravity="center_horizontal"
+                        android:text="Add a Video"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/post_text"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_baseline_edit_24"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#233361"
+                        android:gravity="center_horizontal"
+                        android:text="Write Something"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/post_prayer"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/prayericon"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+
+                        android:textColor="#233361"
+                        android:gravity="center_horizontal"
+                        android:text="Share a prayer request"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/celebrate"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/celebrate"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#233361"
+                        android:gravity="center_horizontal"
+                        android:text="Celebrate Someone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/post_advert"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/add_announcement"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#233361"
+                        android:gravity="center_horizontal"
+                        android:text="Post an Advertisement/ Announcement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/post_testimony"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/post_testimony"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#233361"
+                        android:gravity="center_horizontal"
+                        android:text="Share what God has done (Testimony)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/post_scripture"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_baseline_description_24"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#233361"
+                        android:gravity="center_horizontal"
+                        android:text="Share a Scripture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/post_event"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_baseline_calendar_today_24"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#233361"
+                        android:gravity="center_horizontal"
+                        android:text="Add Upcoming Event"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginBottom="80dp"
+                   android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp"
+                    android:text="Be informed that whatever you post should be christian related and must uphold christian virtues"
+                    android:id="@+id/text_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="28dp"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

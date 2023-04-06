@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/card"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+<ImageView
+    android:adjustViewBounds="false"
+    android:baselineAligned="false"
+    android:cropToPadding="true"
+    android:scaleType="centerInside"
+    android:src="@drawable/logos"
+    android:id="@+id/linkimage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    <TextView
+        android:textColor="#33353E"
+        android:id="@+id/titlelink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:textColor="#33353E"
+        android:textStyle="bold"
+        android:id="@+id/linkdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:text="https://youtube.com"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+</LinearLayout>

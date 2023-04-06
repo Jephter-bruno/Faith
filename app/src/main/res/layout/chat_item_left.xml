@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#F5F8FA"
+    android:layout_marginEnd="40dp"
+    android:gravity="start"
+android:layout_gravity="start"
+    android:layout_marginTop="1dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/message_profile_image"
+    android:layout_width="40dp"
+    android:layout_height="40dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginEnd="1dp"
+        android:id="@+id/buble"
+        android:src="@drawable/ic_baseline_bubble_chart_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+   <LinearLayout
+
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:id="@+id/mess"
+           android:orientation="vertical"
+           android:background="@drawable/rounded_edittext_sender"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <io.github.ponnamkarthik.richlinkpreview.RichLinkViewTwitter
+               android:id="@+id/richLinkView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+           </io.github.ponnamkarthik.richlinkpreview.RichLinkViewTwitter>
+
+           <TextView
+               android:layout_marginEnd="5dp"
+               android:id="@+id/show_Message"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="2dp"
+               android:layout_marginStart="5dp"
+               android:text="Received message sample!"
+               android:textColor="#fff"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+<LinearLayout
+    android:gravity="end"
+    android:layout_gravity="end"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginStart="10dp"
+        android:textColor="#fff"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="7sp"
+        android:id="@+id/show_times"
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+       </LinearLayout>
+       <androidx.cardview.widget.CardView
+           app:cardElevation="10dp"
+           app:cardCornerRadius="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <ImageView
+               android:id="@+id/show_image"
+               android:layout_width="match_parent"
+               android:layout_height="250dp"
+               android:layout_alignParentTop="true"
+               android:layout_toEndOf="@+id/message_profile_image"
+               android:adjustViewBounds="false"
+               android:cropToPadding="true"
+               android:scaleType="fitXY"
+               android:visibility="visible" />
+
+       </androidx.cardview.widget.CardView>
+
+       <TextView
+           android:textSize="7sp"
+           android:id="@+id/show_time"
+           android:text="Time"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+   </LinearLayout>
+
+</LinearLayout>

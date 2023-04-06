@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/lin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/lin1"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:src="@drawable/user"
+                    android:id="@+id/profile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/incase"
+                        android:text="In case you missed, "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+
+                        android:id="@+id/name"
+                        android:textColor="#233361"
+                        android:text="John Doe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/from"
+                            android:textColor="#132942"
+                            android:text="from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/church"
+                            android:textColor="#132942"
+                            android:layout_marginLeft="5dp"
+                            android:text="Meswondo Faith Church"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/type"
+                    android:textColor="#132942"
+                    android:layout_marginStart="10dp"
+                    android:text="Posted a video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:maxLines="2"
+                    android:id="@+id/description"
+                    android:textColor="#132942"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <io.github.ponnamkarthik.richlinkpreview.RichLinkViewSkype
+                    android:id="@+id/richLinkView"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </io.github.ponnamkarthik.richlinkpreview.RichLinkViewSkype>
+                <TextView
+                    android:id="@+id/descriptions"
+                    android:textColor="#132942"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/watch_video"
+                    android:drawableStart="@drawable/ic_baseline_play_circle_outline_24"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:text="Click here to watch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/view_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="View More"
+                    android:textColor="#132942"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/photo"
+                    android:textColor="#132942"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    android:text="View photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="end"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="#483980"
+                        android:textSize="12sp"
+                        android:id="@+id/date"
+                        android:text="12 March 2020"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="#483980"
+                        android:textSize="12sp"
+                        android:id="@+id/time"
+                        android:layout_marginStart="10dp"
+                        android:text="10:30 pm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout></LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+</LinearLayout>

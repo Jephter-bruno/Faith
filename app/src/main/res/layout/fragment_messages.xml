@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F5F8FA"
+    android:layout_height="match_parent"
+    tools:context=".drop.MessagesFragment">
+    <LinearLayout
+
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:ems="10"
+            android:background="@drawable/background"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:hint="Search By Name" />
+    </LinearLayout>
+<TextView
+    android:textSize="16sp"
+    android:layout_marginStart="10dp"
+    android:text="Messages"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+      android:layout_gravity="center_vertical"
+        android:text="Message Friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:text="Send private messages or share your favorite posts directly with friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/banner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/online_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginBottom="50dp"
+        android:id="@+id/users_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/chatss"
+        android:gravity="center"
+        android:layout_margin="30dp"
+        android:text="After exchanging messages with other church members, your chats will appear here. Be the first to innitiate the conversation "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

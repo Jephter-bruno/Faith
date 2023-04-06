@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:label="Faith"
+        android:id="@+id/navigation_home"
+        android:name="com.glamour.faith.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_members"
+        android:label="Faith"
+        android:name="com.glamour.faith.ui.church_members.ChurchMembersFragment"
+        tools:layout="@layout/fragment_church_members" />
+
+    <fragment
+        android:id="@+id/navigation_post"
+        android:label="Faith"
+        android:name="com.glamour.faith.ui.post.PostFragment"
+        tools:layout="@layout/fragment_post" />
+    <fragment
+        android:label="Faith"
+        android:id="@+id/navigation_testimony"
+        android:name="com.glamour.faith.ui.testimony.TestimonyFragment"
+        tools:layout="@layout/fragment_testimony" />
+    <fragment
+        android:label="Faith"
+        android:id="@+id/navigation_adverts"
+        android:name="com.glamour.faith.drop.MessagesFragment"
+        tools:layout="@layout/fragment_messages" />
+
+</navigation>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Faith Ministries</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="banner_ad_unit_id">ca-app-pub-2023195679775199/2245532260</string>
+    <string name="admob_app_id">ca-app-pub-2023195679775199/2245532260</string>
+    <string name="ad_unit_id">ca-app-pub-2023195679775199/2245532260</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="simple_text" />
+    <string name="title_activity_upcoming_events">UpcomingEventsActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fb_placement_banner" translatable="false">540434393744816_559931978461724</string>
+    <string name="fb_placement_Interstitial">540434393744816_540465010408421</string>
+    <string name="retry">Retry</string>
+</resources>

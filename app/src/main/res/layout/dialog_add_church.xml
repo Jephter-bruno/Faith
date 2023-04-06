@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background">
+    <RelativeLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        >
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textSize="14sp"
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:text="Jane Doe" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="bottom"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:visibility="visible"
+                                android:id="@+id/chuched"
+                                android:textSize="14sp"
+                                android:hint="Add Church"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="50dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            <io.github.ponnamkarthik.richlinkpreview.RichLinkView
+                                android:id="@+id/richLinkViews"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </io.github.ponnamkarthik.richlinkpreview.RichLinkView>
+
+
+                            <Button
+                                android:layout_gravity="center_horizontal"
+                                android:id="@+id/post_churc"
+                                android:layout_marginRight="50dp"
+                                android:layout_marginLeft="50dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginTop="10dp"
+                                android:textColor="#fff"
+                                android:textAllCaps="false"
+                                android:text="Post"
+                                android:background="@drawable/gradient_background"
+                                android:layout_width="150dp"
+                                android:layout_height="30dp"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

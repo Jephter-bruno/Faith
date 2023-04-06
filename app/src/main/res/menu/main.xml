@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <!-- <item
+        android:icon="@drawable/ic_baseline_message_24"
+        android:id="@+id/action_message"
+        android:orderInCategory="100"
+        android:title="Messages"
+        android:label="Messages"
+        app:showAsAction="ifRoom" />-->
+    <item
+        android:icon="@drawable/ic_baseline_notifications_24"
+        android:id="@+id/action_notification"
+        android:orderInCategory="100"
+        android:title="Notifications"
+
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="100"
+        android:title="My Profile"
+        app:showAsAction="never" />
+   <!-- <item
+        android:id="@+id/action_donate"
+        android:orderInCategory="100"
+        android:title="Donate"
+        app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_events"
+        android:orderInCategory="100"
+        android:title="Upcoming Events"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_movies"
+        android:orderInCategory="100"
+        android:title="Christian Movies"
+        app:showAsAction="never" />
+    <item
+        android:visible="false"
+        android:id="@+id/action_biblical_movies"
+        android:orderInCategory="100"
+        android:title="Biblical Movies"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_artist"
+        android:orderInCategory="100"
+        android:title="Our Artists"
+        app:showAsAction="never" />
+<!--
+    <item
+        android:id="@+id/action_hymns"
+        android:orderInCategory="100"
+        android:title="Hymns"
+        app:showAsAction="never"
+        >
+        <item
+            android:visible="false"
+            android:id="@+id/action_kale"
+            android:orderInCategory="100"
+            android:title="Kalenjin Hyms"
+            app:showAsAction="never" />
+        <item
+            android:visible="false"
+            android:id="@+id/action_kisw"
+            android:orderInCategory="100"
+            android:title="Kiswahili Hymns"
+            app:showAsAction="never" />
+    </item>
+-->
+   <!-- <item
+        android:visible="false"
+        android:id="@+id/action_bible"
+        android:orderInCategory="100"
+        android:title="Bible"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_listen"
+        android:orderInCategory="100"
+        android:title="Reported Posts"
+        app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="Log Out"
+        app:showAsAction="never" />
+
+</menu>

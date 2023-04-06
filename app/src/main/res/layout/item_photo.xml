@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp"
+    android:background="#F5F8FA"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/comssssssss"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/comsssssss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/comssssss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:src="@drawable/user"
+                    android:id="@+id/profile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                   />
+
+                <LinearLayout
+                    android:id="@+id/comsssss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/comssss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:orientation="vertical">
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:textSize="16sp"
+                           android:textColor="#233361"
+                           android:id="@+id/name"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Jane Doe"
+                           />
+                   </LinearLayout>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/helvetica_neue"
+                            android:id="@+id/from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text=" from" />
+
+                        <TextView
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:id="@+id/church"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Meswondo Faith Church"
+                           />
+                        <LinearLayout
+                            android:gravity="end"
+                            android:layout_gravity="end"
+                            android:id="@+id/comsss"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:visibility="gone"
+                                android:fontFamily="@font/assistant"
+                                android:id="@+id/posted"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" posted this on" />
+                            <TextView
+                                android:textSize="12sp"
+                                android:textColor="#233361"
+                                android:id="@+id/date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:gravity="end"
+                                android:text="12/12/2020" />
+
+                            <TextView
+                                android:textColor="#233361"
+                                android:textSize="12sp"
+                                android:gravity="end"
+                                android:layout_gravity="end"
+                                android:layout_marginStart="10dp"
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:text="10:30 pm"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/lindrop"
+                            android:gravity="end"
+                            android:layout_gravity="end"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageButton
+                                android:id="@+id/more"
+                                android:layout_gravity="end"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_baseline_more_vert_24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:id="@+id/comss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:orientation="horizontal">
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                android:id="@+id/celebrate"
+                android:layout_marginStart="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Retweeted a post posted by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginStart="50dp"
+                android:id="@+id/cel"
+                android:visibility="gone"
+                android:textColor="#33353E"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Is celebrating "
+
+                />
+            <TextView
+                android:visibility="gone"
+                android:fontFamily="@font/helvetica_neue"
+                android:padding="30dp"
+                android:id="@+id/descriptions"
+                android:layout_width="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_background"
+                android:text="Desma's Video Launch On 21 may 2021 at Meswondo Faith Church Starting from 2:00 Pm"
+                android:textAlignment="center"
+                android:textColor="#fff" />
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/eventprof"
+                android:layout_marginStart="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/prof"
+
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <LinearLayout
+
+
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/namd"
+                            android:textColor="#33353E"
+                            android:text="Jane Doe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textColor="#33353E"
+                            android:layout_marginLeft="10dp"
+                            android:text="from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textColor="#33353E"
+                            android:id="@+id/churchs"
+                            android:layout_marginLeft="10dp"
+                            android:text="Meswondo Faith Church"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:textColor="@color/cardview_dark_background"
+                android:id="@+id/scripturebk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:baselineAligned="false"
+                android:layout_marginStart="50dp"
+                />
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"/>
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:textStyle="bold"
+                            android:text="Jane Doe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+
+                            android:layout_marginLeft="10dp"
+                            android:text="from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"
+                            android:text="Meswondo Faith Church"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginEnd="5dp"
+                android:textColor="#33353E"
+                android:id="@+id/scripturecnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                />
+            <TextView
+                android:layout_marginEnd="5dp"
+                android:textColor="@android:color/background_dark"
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                />
+
+            <io.github.ponnamkarthik.richlinkpreview.RichLinkViewSkype
+                android:id="@+id/richLinkView"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </io.github.ponnamkarthik.richlinkpreview.RichLinkViewSkype>
+            <androidx.cardview.widget.CardView
+                app:cardElevation="3dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:background="#F5F8FA"
+                    android:id="@+id/image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:baselineAligned="false"
+                    android:cropToPadding="true"
+                    android:scaleType="fitXY" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+                android:layout_gravity="center"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/videoview"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:resize_mode="fit"
+        app:use_controller="true" />
+
+</androidx.cardview.widget.CardView>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lin1"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:background="#F5F8FA"
+                >
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="100dp"
+                        android:src="@drawable/download"
+                        android:layout_height="100dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_marginStart="60dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_baseline_access_time_24"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/times"
+                            android:textColor="#483980"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:text="10:00 AM"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginStart="50dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_baseline_calendar_today_24"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/dates"
+                            android:textColor="#483980"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:text="23 march 2021"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/eventtxt"
+                    android:textStyle="bold"
+                    android:textColor="#233361"
+                    android:layout_marginStart="60dp"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:text="Techno Fair 2021"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="60dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_baseline_location_on_24"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/venues"
+                        android:textColor="#132942"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="Meswondo Faith Church"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/churchss"
+                    android:textColor="#33353E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Desma Mutai on behalf of the whole ministry is welcoming you all to a tecno fair to be held on 19 march 2021....."
+                    android:textAlignment="center"
+                    android:textSize="15sp" />
+                <LinearLayout
+                    android:background="#F5F8FA"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:src="@drawable/user"
+                        android:id="@+id/profiles"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/names"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jane Doe"
+                                android:textColor="#233361"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/designations"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="3"
+                android:id="@+id/coms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/liked"
+                        android:layout_width="27dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/like"
+                        android:text="John Doe"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:textColor="#33353E"
+                        android:layout_marginEnd="10dp"
+                        android:text="21 Likes"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:id="@+id/displayNolikes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                      />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+
+                        android:layout_width="27dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/comment" />
+
+                    <TextView
+                        android:textColor="#33353E"
+                        android:layout_marginEnd="10dp"
+                        android:text="51 comments"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:id="@+id/displayNocomment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/retweet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="27dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_share_24"
+                        android:text="John Doe"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_marginEnd="10dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#33353E"
+                        android:text="Share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
