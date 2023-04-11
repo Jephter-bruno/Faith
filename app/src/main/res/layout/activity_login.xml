@@ -38,7 +38,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <ImageView
-        android:src="@drawable/logos"
+        android:src="@drawable/jesus"
         android:layout_width="250dp"
         android:layout_height="250dp"/>
     <TextView
@@ -80,17 +80,15 @@
                             android:src="@drawable/ic_baseline_email_24" />
 
                         <com.google.android.material.textfield.TextInputLayout
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp">
 
                             <com.google.android.material.textfield.TextInputEditText
-
                                 android:textSize="14sp"
                                 android:id="@+id/email"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="48dp"
                                 android:hint="Email"
                                 android:inputType="textEmailAddress" />
                         </com.google.android.material.textfield.TextInputLayout>
@@ -137,7 +135,7 @@
                 <Button
                     android:id="@+id/login"
                     android:layout_width="250dp"
-                    android:layout_height="30dp"
+                    android:layout_height="48dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/gradient_background"

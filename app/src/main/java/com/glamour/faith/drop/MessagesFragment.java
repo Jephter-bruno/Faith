@@ -34,6 +34,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class MessagesFragment extends Fragment {
@@ -62,6 +63,7 @@ TextView chatss;
         fuser = FirebaseAuth.getInstance().getCurrentUser();
         usersList = new ArrayList<>();
         reference = FirebaseDatabase.getInstance().getReference("Chats");
+/*
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -78,6 +80,34 @@ TextView chatss;
 
                         }
                         readChats();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+*/
+// Create a HashSet to store unique users
+        HashSet<String> uniqueUsers = new HashSet<>();
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                usersList.clear();
+                // Loop through each child DataSnapshot
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Chat chat = dataSnapshot.getValue(Chat.class);
+                    assert chat != null;
+                    if (chat.getSender().equals(fuser.getUid())) {
+                        uniqueUsers.add(chat.getReceiver());
+                    } else if (chat.getReceiver().equals(fuser.getUid())) {
+                        uniqueUsers.add(chat.getSender());
+                    }
+                }
+                // Convert the HashSet back to ArrayList
+                usersList.addAll(uniqueUsers);
+                readChats();
             }
 
             @Override

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.glamour.faith.adapters.ViewPagerAdapter;
@@ -13,6 +14,7 @@ import com.glamour.faith.drop.ProfileActivity;
 import com.glamour.faith.drop.UpcomingEventsActivity;
 import com.glamour.faith.ui.ChristianMoviesActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -37,17 +39,27 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private ViewPagerAdapter adapter;
     DatabaseReference userRef;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        fab = findViewById(R.id.fab);
         mAuth=FirebaseAuth.getInstance();
         userRef = FirebaseDatabase.getInstance().getReference().child("Members");
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,ChatgptSplashActivity.class));
+            }
+        });
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_post, R.id.navigation_adverts,R.id.navigation_testimony)
                 .build();

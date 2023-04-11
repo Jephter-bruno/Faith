@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F5F8FA"
+
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -20,7 +20,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_backgrounds"
+                android:background="@drawable/background01"
                 android:orientation="vertical">
                 <com.google.android.gms.ads.AdView
                     xmlns:ads="http://schemas.android.com/apk/res-auto"

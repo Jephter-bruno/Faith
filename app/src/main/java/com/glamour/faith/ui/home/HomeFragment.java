@@ -126,8 +126,9 @@ private DatabaseReference postphotoref, databaseReference,likesRef,postRef_publi
     private AdView mAdView;
     Boolean LikeChecker = false;
     String PostKey;
-
+    private boolean isLoading = false;
     String CurrentUserId;
+    private ImageView ratingBar;
 
     private boolean mGameOver;
     public Button watch_video,retry;
@@ -148,6 +149,7 @@ private DatabaseReference postphotoref, databaseReference,likesRef,postRef_publi
         linhom = root.findViewById(R.id.linhome);
         gif = root.findViewById(R.id.gif);
         available = root.findViewById(R.id.available);
+        ratingBar = root.findViewById(R.id.ratingBar);
         available.setVisibility(View.GONE);
         card = root.findViewById(R.id.card);
         card.setVisibility(View.GONE);
@@ -189,6 +191,9 @@ private DatabaseReference postphotoref, databaseReference,likesRef,postRef_publi
         linearLayoutManager1.setReverseLayout(true);
         linearLayoutManager1.setStackFromEnd(true);
         recycler_posts.setLayoutManager(linearLayoutManager1);
+
+
+
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -571,6 +576,32 @@ FirebaseDatabase.getInstance().getReference().child("Post_Scripture").addListene
 });
 */
         return root;
+    }
+
+    private void animateHeartbeat() {
+        ratingBar.animate()
+                .scaleX(1.2f) // Scale up horizontally
+                .scaleY(1.2f) // Scale up vertically
+                .alpha(0.5f) // Reduce opacity
+                .setDuration(500) // Animation duration in milliseconds
+                .withEndAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        ratingBar.animate()
+                                .scaleX(1.0f) // Scale back to original size horizontally
+                                .scaleY(1.0f) // Scale back to original size vertically
+                                .alpha(1.0f) // Restore opacity
+                                .setDuration(500) // Animation duration in milliseconds
+                                .withEndAction(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        animateHeartbeat(); // Repeat the animation
+                                    }
+                                })
+                                .start();
+                    }
+                })
+                .start();
     }
 
     private void loadfbads() {
@@ -4188,6 +4219,7 @@ FirebaseDatabase.getInstance().getReference().child("Post_Scripture").addListene
     }
      public void setPostVideo(Context cx, String postVideo) {
    videoview = mView.findViewById(R.id.videoview);
+
    try {
        BandwidthMeter bandwidthMeter = new DefaultBandwidthMeter.Builder(cx).build();
        TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));

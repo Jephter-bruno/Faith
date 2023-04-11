@@ -166,7 +166,6 @@
                                 android:gravity="end"
                                 android:text="Scripture" />
                             <LinearLayout
-                                android:textColor="@color/text_light_blue"
                                 android:layout_gravity="end"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -306,23 +305,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 <LinearLayout
+    android:gravity="center"
+    android:layout_gravity="center_vertical"
     android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/available"
-        android:textSize="12sp"
-        android:layout_margin="5dp"
-        android:layout_width="wrap_content"
-        android:text="Available ChatRooms for you"
-        android:layout_height="wrap_content"/>
-
     <ImageView
         android:id="@+id/ratingBar"
-        android:layout_width="13dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:src="@drawable/ic_baseline_bubble_chart_24" />
+
+    <TextView
+        android:id="@+id/available"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:text="Available Chat Rooms For you"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
             <RelativeLayout

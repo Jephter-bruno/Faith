@@ -71,6 +71,11 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.facebook.android:audience-network-sdk:6.2.0'
     implementation "com.github.parse-community.Parse-SDK-Android:parse:1.25.0"
+    // Volley Library
+    implementation 'com.android.volley:volley:1.2.1'
+
+    // ok http
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
 
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
     implementation 'com.google.android.gms:play-services-location:18.0.0'
