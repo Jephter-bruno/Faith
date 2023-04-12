@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1030628406168",
-    "project_id": "faith-ce65c",
-    "storage_bucket": "faith-ce65c.appspot.com"
+    "project_number": "698084986912",
+    "project_id": "faithconnect-25c19",
+    "storage_bucket": "faithconnect-25c19.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1030628406168:android:57df956df327331a26b1ed",
+        "mobilesdk_app_id": "1:698084986912:android:6b501888595ce432106c45",
         "android_client_info": {
           "package_name": "com.glamour.faith"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1030628406168-m7ajidk91bgi4rd15d5g9ijk0llsh7k6.apps.googleusercontent.com",
+          "client_id": "698084986912-ckptv1ljsslbfbmpabl3q1ii3716mitn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBkMfoGeWuh3Ehbt7psNXTGm-udDHi1OEw"
+          "current_key": "AIzaSyAMNOcV2dpei3dsMGvR3etLRbhDVTZSxzo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1030628406168-m7ajidk91bgi4rd15d5g9ijk0llsh7k6.apps.googleusercontent.com",
+              "client_id": "698084986912-ckptv1ljsslbfbmpabl3q1ii3716mitn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
