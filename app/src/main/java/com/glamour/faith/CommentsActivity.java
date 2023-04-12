@@ -387,7 +387,7 @@ public class CommentsActivity extends AppCompatActivity {
                         Glide.with(getApplicationContext()).load(postimage).into(image_view);
                     }
                     else if(mode.equals("video")){
-                        String postimages = getIntent().getExtras().get("vid").toString();
+                        String postimages = getIntent().getExtras().get("video").toString();
                         String des = getIntent().getExtras().get("description").toString();
 
                             try {

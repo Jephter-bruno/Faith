@@ -116,7 +116,7 @@ public class ProfileActivity extends AppCompatActivity {
     LinearLayout viewchurd, youtube, members, articles,addchurchs;
     ArrayAdapter<String> adapter;
     Button updatechurc;
-    TextView updateprofile;
+    ImageView updateprofile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -147,8 +147,8 @@ public class ProfileActivity extends AppCompatActivity {
         view_members = findViewById(R.id.view_members);
         View_reportedPosts = findViewById(R.id.View_reportedPosts);
         gender = findViewById(R.id.gender);
-        age = findViewById(R.id.age);
-        mar_status = findViewById(R.id.mar_status);
+       /* age = findViewById(R.id.age);
+        mar_status = findViewById(R.id.mar_status);*/
         phone = findViewById(R.id.phone);
         addchurch = findViewById(R.id.addchurch);
         email = findViewById(R.id.email);
@@ -333,9 +333,9 @@ public class ProfileActivity extends AppCompatActivity {
                     church.setText(churchss);
                     /* email.setText();*/
                     gender.setText(gend);
-                    mar_status.setText(marital);
+                   /* mar_status.setText(marital);*/
                     phone.setText(phones);
-                     age.setText(dateofbirth);
+                    /* age.setText(dateofbirth);*/
                     designation.setText(design);
                     if(design.equals("Member/Artist")){
                         post_event.setVisibility(View.GONE);

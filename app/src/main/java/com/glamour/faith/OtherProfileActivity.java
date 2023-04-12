@@ -72,7 +72,7 @@ import io.github.ponnamkarthik.richlinkpreview.ViewListener;
 
 public class OtherProfileActivity extends AppCompatActivity {
     private LinearLayout post_photo,post_text,post_scripture,post_video,post_testimony,postadvert,post_event,post_my_videos;
-    private TextView gender,age,mar_status,phone,email,church,designation,name;
+    private TextView gender,age,mar_status,phone,email,church,designation,name,my;
     private FloatingActionButton floatingActionButton2;
     private DatabaseReference databaseReference,postphotoref,likesRef,reference;
     private FirebaseAuth mAuth;
@@ -90,13 +90,14 @@ public class OtherProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_other_profile);
         profile = findViewById(R.id.profile);
         gender = findViewById(R.id.gender);
-        age = findViewById(R.id.age);
-        mar_status = findViewById(R.id.mar_status);
+        my = findViewById(R.id.my);
+       /* age = findViewById(R.id.age);
+        mar_status = findViewById(R.id.mar_status);*/
         phone = findViewById(R.id.phone);
         church = findViewById(R.id.church);
         designation = findViewById(R.id.designation);
         name = findViewById(R.id.name);
-        LinearLayout send_message = findViewById(R.id.post_testimonys);
+
 
         mAuth = FirebaseAuth.getInstance();
         currentUserId = mAuth.getCurrentUser().getUid();
@@ -183,10 +184,11 @@ public class OtherProfileActivity extends AppCompatActivity {
                         church.setText(member.getChurch());
                         /* email.setText();*/
                         gender.setText(member.getGender());
-                        mar_status.setText(member.getStatus());
+                  /*      mar_status.setText(member.getStatus());*/
                         phone.setText(member.getPhone());
-                        age.setText(member.getBirthDate());
+                        /*age.setText(member.getBirthDate());*/
                         designation.setText(member.getDesignation());
+                        my.setText(member.getName());
                     }
                 }
             }
@@ -1502,8 +1504,6 @@ public class OtherProfileActivity extends AppCompatActivity {
     public static class ProfileViewHolder extends RecyclerView.ViewHolder{
         View view;
         private final TextView gender;
-        private final TextView age;
-        private final TextView mar_status;
         private final TextView phone;
         private TextView email;
         private final TextView church;
@@ -1515,8 +1515,8 @@ public class OtherProfileActivity extends AppCompatActivity {
             view = itemView;
             profile = view.findViewById(R.id.profile);
             gender = view.findViewById(R.id.gender);
-            age = view.findViewById(R.id.age);
-            mar_status = view.findViewById(R.id.mar_status);
+            /*age = view.findViewById(R.id.age);
+            mar_status = view.findViewById(R.id.mar_status);*/
             phone = view.findViewById(R.id.phone);
             church = view.findViewById(R.id.church);
             designation = view.findViewById(R.id.designation);
@@ -1535,8 +1535,8 @@ public class OtherProfileActivity extends AppCompatActivity {
             gend.setText(gender);
         }
         public void setMaritalStatus(String maritalStatus) {
-            TextView mar_status = view.findViewById(R.id.mar_status);
-            mar_status.setText(maritalStatus);
+            /*TextView mar_status = view.findViewById(R.id.mar_status);
+            mar_status.setText(maritalStatus);*/
         }
         public void setPhone(String phone) {
             TextView phon = view.findViewById(R.id.phone);

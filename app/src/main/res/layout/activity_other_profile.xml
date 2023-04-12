@@ -28,25 +28,6 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"/>
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="41dp"
-                        android:layout_marginBottom="5dp"
-                        android:padding="1dp"
-                        android:src="@drawable/ic_shopping" />
-
-                    <ImageView
-                        android:layout_margin="5dp"
-                        android:padding="1dp"
-                        android:layout_alignParentEnd="true"
-                        android:src="@drawable/ic_notification"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"/>
-
                 </RelativeLayout>
 
             </LinearLayout>
@@ -55,8 +36,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/my"
                     android:text="My"
-                    android:textStyle="normal"
+                    android:textStyle="bold"
                     android:textColor="#ffff"
                     android:textSize="30sp"
                     android:layout_marginStart="15dp"
@@ -102,6 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <TextView
+                        android:id="@+id/name"
                         android:layout_marginTop="15dp"
                         android:text="Jane Doe"
                         android:textSize="15sp"
@@ -112,6 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/designation"
                         android:layout_marginTop="2dp"
                         android:text="Member"
                         android:textSize="13sp"
@@ -131,41 +115,89 @@
                         android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
-                            android:layout_weight="1"
-                            android:text="Personal Info"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:textSize="14sp"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"/>
-                        <View
-                            android:background="#79D6D1D1"
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"/>
-                        <TextView
-                            android:layout_weight="1"
-                            android:text="Family"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:textSize="14sp"
-                            android:textColor="#636262"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"/>
-                        <View
-                            android:background="#79D6D1D1"
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"/>
-                        <TextView
-                            android:layout_weight="1"
-                            android:text="Vitals"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:textSize="14sp"
-                            android:textColor="#636262"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"/>
+                     <LinearLayout
+                         android:layout_gravity="center"
+                         android:layout_margin="7dp"
+                         android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                       <TextView
+                           android:drawableLeft="@drawable/ic_phone"
+                         android:text="Mobile"
+                         android:gravity="center"
+                           android:layout_gravity="center"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"/>
+                         <TextView
+                             android:id="@+id/phone"
+                             android:layout_weight="1"
+                             android:text="Mobile"
+                             android:gravity="center"
+                             android:textSize="12sp"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"/>
 
+                        </LinearLayout>
+                        <View
+                            android:background="#79D6D1D1"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"/>
+                        <LinearLayout
+                            android:layout_margin="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:drawableLeft="@drawable/ic_home"
+
+                                android:text="Church"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/church"
+                                android:layout_weight="1"
+                                android:text="Church"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                        <View
+                            android:background="#79D6D1D1"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"/>
+                        <LinearLayout
+                            android:layout_margin="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:drawableLeft="@drawable/ic_baseline_gender"
+
+                                android:text="Gender"
+                                android:gravity="start"
+                                android:layout_marginStart="10dp"
+                                android:textStyle="bold"
+                                android:textSize="17sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/gender"
+                                android:layout_weight="1"
+                                android:text="Gender"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textSize="12sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -180,12 +212,33 @@
         </RelativeLayout>
         <de.hdodenhof.circleimageview.CircleImageView
             android:src="@drawable/slider"
+            android:id="@+id/profile"
             android:elevation="15dp"
             android:padding="5dp"
             android:layout_centerHorizontal="true"
             android:layout_width="98dp"
             android:layout_height="98dp"/>
-    </RelativeLayout>        <ScrollView
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_backgrounds"
+        android:orientation="vertical">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+
+
+    </LinearLayout>
+    <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -193,9 +246,31 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <include layout="@layout/item_add"/>
-                <include layout="@layout/item_info"/>
-                <include layout="@layout/item_email"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/banner_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+
+                </RelativeLayout>
+                <TextView
+                    android:text="Articles"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:textStyle="bold"
+                    android:id="@+id/recycler_post"
+                    android:textSize="17sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
         </ScrollView>
