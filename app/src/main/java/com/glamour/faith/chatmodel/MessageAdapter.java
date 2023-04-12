@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -51,7 +52,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
-        MaterialCardView left_chat_view, right_chat_view;
+        CardView left_chat_view, right_chat_view;
         TextView left_chat_text_view, right_chat_text_view;
 
         public MyViewHolder(@NonNull View itemView) {

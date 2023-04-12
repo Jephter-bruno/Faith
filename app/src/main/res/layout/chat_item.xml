@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:padding="8dp">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/left_chat_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,8 +38,8 @@
 
         </RelativeLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-    <com.google.android.material.card.MaterialCardView
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
         android:id="@+id/right_chat_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,6 +76,6 @@
 
         </RelativeLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
