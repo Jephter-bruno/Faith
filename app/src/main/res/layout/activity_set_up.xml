@@ -40,10 +40,9 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="-50dp"
-                        android:fontFamily="@font/helvetica_neue"
                         android:gravity="center_vertical"
                         android:text="Have Faith We are almost there"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -321,6 +320,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
+<EditText
+    android:visibility="gone"
+    android:hint="Church"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/church"/>
+                    <Button
+                        android:visibility="gone"
+                        android:id="@+id/submitchurch"
+                        android:layout_width="250dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/gradient_background"
+                        android:text="Save Church"
+                        android:textAllCaps="false"
+                        android:textColor="#ffff" />
 
                     <Button
                         android:id="@+id/uploadBtn"

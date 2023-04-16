@@ -23,7 +23,7 @@
         android:name="com.glamour.faith.ui.post.PostFragment"
         tools:layout="@layout/fragment_post" />
     <fragment
-        android:label="Faith"
+        android:label="@string/app_name"
         android:id="@+id/navigation_testimony"
         android:name="com.glamour.faith.ui.testimony.TestimonyFragment"
         tools:layout="@layout/fragment_testimony" />

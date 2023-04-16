@@ -26,6 +26,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.glamour.faith.drop.ProfileActivity;
 import com.glamour.faith.models.Slide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -58,7 +59,7 @@ public class SetUpActivity extends AppCompatActivity  implements
         AdapterView.OnItemSelectedListener {
     private static final int PICK_IMAGE_REQUEST = 1;
     private CircleImageView chooseImageBtn;
-    private Button uploadBtn;
+    private Button uploadBtn, submitchurch;
     String[] gender = {"Select Gender", "Male", "Female", "Other"};
     String[] marital_status = {"Select Marital Status", "Married", "Single", "Widow", "Widower"};
     String[] designation = {"Select Your Designation", "Bishop", "Reverend", "Pastor", "Evangelist","Member/Artist", "Member"};
@@ -75,11 +76,12 @@ public class SetUpActivity extends AppCompatActivity  implements
     private Uri ImageUri;
     private FirebaseUser fuser;
     private StorageReference userProfileImageRef;
-    private DatabaseReference mDatabaseRef, churches;
+    private DatabaseReference mDatabaseRef, churches,Reference;
     private StorageTask mUploadTask;
     private FirebaseAuth mAuth;
     String currentUser_id;
     ValueEventListener listener;
+    EditText churchs;
     ArrayAdapter<String> adapter;
     ArrayList<String> spinnerDataList;
     private List<Slide> lstSlides ;
@@ -93,6 +95,8 @@ public class SetUpActivity extends AppCompatActivity  implements
         setContentView(R.layout.activity_set_up);
         spinner4 = findViewById(R.id.spinner4);
         chooseImageBtn = findViewById(R.id.button_choose_image);
+        churchs = findViewById(R.id.church);
+        submitchurch = findViewById(R.id.submitchurch);
         uploadBtn = findViewById(R.id.uploadBtn);
         dateofbirth = findViewById(R.id.dateofbirth);
         sliderpager = findViewById(R.id.slider_pager);
@@ -101,6 +105,7 @@ public class SetUpActivity extends AppCompatActivity  implements
         currentUser_id = mAuth.getCurrentUser().getUid();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Members").child(currentUser_id);
         churches = FirebaseDatabase.getInstance().getReference("Churches");
+        Reference = FirebaseDatabase.getInstance().getReference("Churches");
         ImageSlider imageSlider = findViewById(R.id.image_slider);
         final List<SlideModel> remoteImages = new ArrayList<>();
         FirebaseDatabase.getInstance().getReference().child("Post_Scripture").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -122,7 +127,41 @@ public class SetUpActivity extends AppCompatActivity  implements
 
             }
         });
-       AdView mAdView = findViewById(R.id.adView);
+        submitchurch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String church = churchs.getText().toString();
+                if(TextUtils.isEmpty(church)){
+                    Toast.makeText(SetUpActivity.this, "Please Enter church to submit", Toast.LENGTH_SHORT).show();
+                    churchs.setError("PLease Enter Church to submit");
+                }
+                else
+                {
+                    ProgressDialog progressDialog = new ProgressDialog(SetUpActivity.this);
+                    progressDialog.setMessage("Please Wait...");
+                    progressDialog.show();
+                    progressDialog.setCanceledOnTouchOutside(true);
+                    Reference.push().setValue(church).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+
+                                Toast.makeText(SetUpActivity.this, "Church submitted successfully", Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
+                            }
+                            else
+                            {
+                                String mess = task.getException().getMessage();
+                                Toast.makeText(SetUpActivity.this, mess, Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
+                            }
+                        }
+                    });
+                }}
+
+        });
+
+        AdView mAdView = findViewById(R.id.adView);
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.BANNER);
         adView.setAdUnitId(getString(R.string.admob_app_id));
