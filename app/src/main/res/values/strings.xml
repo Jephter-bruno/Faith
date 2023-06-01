@@ -7,7 +7,7 @@
     <string name="admob_app_id">ca-app-pub-2023195679775199/2245532260</string>
     <string name="ad_unit_id">ca-app-pub-2023195679775199/2245532260</string>
     <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-
+<string name="slogan">Connect. Share. Grow. Embrace the Power of Faithful Community.</string>
     <string name="simple_text" />
     <string name="title_activity_upcoming_events">UpcomingEventsActivity</string>
     <string name="tab_text_1">Tab 1</string>

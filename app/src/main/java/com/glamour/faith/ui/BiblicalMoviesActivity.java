@@ -44,8 +44,8 @@ public class BiblicalMoviesActivity extends AppCompatActivity implements MovieIt
         setContentView(R.layout.activity_home);
         mAdView =findViewById(R.id.adView);
 
-        sliderpager = findViewById(R.id.slider_pager) ;
-        indicator = findViewById(R.id.indicator);
+        /*sliderpager = findViewById(R.id.slider_pager) ;
+        indicator = findViewById(R.id.indicator);*/
         MoviesRV = findViewById(R.id.Rv_movies);
         mAdView = findViewById(R.id.adView);
         AdView adView = new AdView(this);
@@ -62,31 +62,33 @@ public class BiblicalMoviesActivity extends AppCompatActivity implements MovieIt
 
         // prepare a list of slides ..
         lstSlides = new ArrayList<>() ;
-        lstSlides.add(new Slide(R.drawable.slide1,"Wolverine \nSuperHero Movie"));
-        lstSlides.add(new Slide(R.drawable.slide2,"Slide Title \nmore text here"));
-        lstSlides.add(new Slide(R.drawable.slide1,"Slide Title \nmore text here"));
-        lstSlides.add(new Slide(R.drawable.slide2,"Slide Title \nmore text here"));
+        lstSlides.add(new Slide(R.drawable.jesus,"Wolverine \nSuperHero Movie"));
+        lstSlides.add(new Slide(R.drawable.jesuss,"Slide Title \nmore text here"));
+        lstSlides.add(new Slide(R.drawable.jesus,"Slide Title \nmore text here"));
+        lstSlides.add(new Slide(R.drawable.jesuss,"Slide Title \nmore text here"));
         SliderPagerAdapter adapter = new SliderPagerAdapter(this,lstSlides);
         sliderpager.setAdapter(adapter);
         // setup timer
-        Timer timer = new Timer();
+       /* Timer timer = new Timer();
         timer.scheduleAtFixedRate(new SliderTimer(),4000,6000);
         indicator.setupWithViewPager(sliderpager,true);
-
+*/
         // Recyclerview Setup
         // ini data
 
-        List<Movie> lstMovies = new ArrayList<>();
+       /* List<Movie> lstMovies = new ArrayList<>();
         lstMovies.add(new Movie("Moana",R.drawable.moana,R.drawable.spidercover));
         lstMovies.add(new Movie("Black P",R.drawable.blackp,R.drawable.spidercover));
         lstMovies.add(new Movie("The Martian",R.drawable.themartian,R.drawable.spidercover));
         lstMovies.add(new Movie("The Martian",R.drawable.mov2,R.drawable.spidercover));
         lstMovies.add(new Movie("The Martian",R.drawable.themartian,R.drawable.spidercover));
-        lstMovies.add(new Movie("The Martian",R.drawable.mov2,R.drawable.spidercover));
+        lstMovies.add(new Movie("The Martian",R.drawable.mov2,R.drawable.spidercover));*/
+/*
 
         MovieAdapter movieAdapter = new MovieAdapter(this,lstMovies,this);
         MoviesRV.setAdapter(movieAdapter);
         MoviesRV.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+*/
 
 
 
@@ -120,6 +122,7 @@ public class BiblicalMoviesActivity extends AppCompatActivity implements MovieIt
 
     }
 
+/*
     class SliderTimer extends TimerTask {
 
 
@@ -140,6 +143,7 @@ public class BiblicalMoviesActivity extends AppCompatActivity implements MovieIt
 
         }
     }
+*/
 
 
 

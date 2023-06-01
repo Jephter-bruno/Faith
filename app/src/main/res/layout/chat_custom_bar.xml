@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
         android:layout_marginTop="14dp"
         android:gravity="center_vertical"
         android:text="Profile Name"
@@ -34,7 +34,7 @@
         android:textStyle="bold" />
 
     <ImageButton
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
         android:background="@android:color/transparent"
         android:layout_alignParentEnd="true"
         android:id="@+id/custom_call"

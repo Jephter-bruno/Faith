@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#18AFA1</color>
-    <color name="colorPrimaryDark">#18AFA1</color>
-    <color name="colorAccent">#18AFA1</color>
+    <color name="colorPrimary">#254F93</color>
+    <color name="colorPrimaryDark">#254F93</color>
+    <color name="colorAccent">#254F93</color>
     <color name="text_light_blue">#FF00</color>
 
-    <color name="colorPrimary1">#18AFA1</color>
+    <color name="colorPrimary1">#F44336</color>
 
-    <color name="colorPrimaryDark1">#18AFA1</color>
+    <color name="colorPrimaryDark1">#254F93</color>
     <color name="button_color">#2C323C</color>
 
-    <color name="colorAccent1">#18AFA1</color>
-    <color name="gold">#18AFA1</color>
+    <color name="colorAccent1">#254F93</color>
+    <color name="gold">#254F93</color>
+    <color name="shimmer_efect">#797C7C</color>
 
 </resources>

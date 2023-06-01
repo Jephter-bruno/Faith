@@ -103,12 +103,12 @@
            <ImageView
                android:id="@+id/show_image"
                android:layout_width="match_parent"
-               android:layout_height="250dp"
+               android:layout_height="wrap_content"
                android:layout_alignParentTop="true"
                android:layout_toEndOf="@+id/message_profile_image"
-               android:adjustViewBounds="false"
+               android:adjustViewBounds="true"
                android:cropToPadding="true"
-               android:scaleType="fitXY"
+               android:scaleType="fitCenter"
                android:visibility="visible" />
 
        </androidx.cardview.widget.CardView>

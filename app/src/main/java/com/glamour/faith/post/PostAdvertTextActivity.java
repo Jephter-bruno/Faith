@@ -338,7 +338,7 @@ public class PostAdvertTextActivity extends AppCompatActivity implements
                 ImageView profile = findViewById(R.id.profile);
                 if(patients.getProfileImage().equals("default"))
                 {
-                    profile.setImageResource(R.drawable.slide2);
+                    profile.setImageResource(R.drawable.user);
                 }
                 else {
                     Picasso.get().load(patients.getProfileImage()).into(profile);

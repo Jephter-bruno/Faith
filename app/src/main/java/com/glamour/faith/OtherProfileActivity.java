@@ -1088,6 +1088,7 @@ public class OtherProfileActivity extends AppCompatActivity {
                     }
                     holder.setLikeButtonStatus(PostKey);
                     holder.setCommentStatus(PostKey);
+
                     holder.scripturecnt.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

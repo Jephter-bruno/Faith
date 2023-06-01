@@ -28,6 +28,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,6 +38,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.glamour.faith.AddPhotoActivity;
 import com.glamour.faith.ChatRoomActivity;
 import com.glamour.faith.ClickPostActivity;
@@ -141,12 +143,17 @@ private DatabaseReference postphotoref, databaseReference,likesRef,postRef_publi
     ImageView gif;
     String names, churc,youth,gend, past;
     SwipeRefreshLayout swipeRefreshLayout;
+    ShimmerFrameLayout shimmerFramelayout;
+    NestedScrollView nestedScrollView;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         watch_video = root.findViewById(R.id.watch_video);
         retry = root.findViewById(R.id.retry);
         linhom = root.findViewById(R.id.linhome);
+        shimmerFramelayout = root.findViewById(R.id.shimmer);
+        shimmerFramelayout.startShimmer();
+        nestedScrollView = root.findViewById(R.id.nestedscroll);
         gif = root.findViewById(R.id.gif);
         available = root.findViewById(R.id.available);
         ratingBar = root.findViewById(R.id.ratingBar);
@@ -166,7 +173,7 @@ private DatabaseReference postphotoref, databaseReference,likesRef,postRef_publi
         add_scripture = root.findViewById(R.id.add_scripture);
         addurl = root.findViewById(R.id.addurl);
         progressBar = root.findViewById(R.id.progressBars);
-
+        progressBar.setVisibility(View.GONE);
         mAuth = FirebaseAuth.getInstance();
         CurrentUserId= mAuth.getCurrentUser().getUid();
         databaseReference = FirebaseDatabase.getInstance().getReference("Post_videos_public");
@@ -2554,6 +2561,9 @@ FirebaseDatabase.getInstance().getReference().child("Post_Scripture").addListene
         };
         firebaseRecyclerAdapter.startListening();
         progressBar.setVisibility(View.GONE);
+        shimmerFramelayout.stopShimmer();
+        shimmerFramelayout.setVisibility(View.GONE);
+        nestedScrollView.setVisibility(View.VISIBLE);
         recycler_post.setAdapter(firebaseRecyclerAdapter);
         firebaseRecyclerAdapter.notifyDataSetChanged();
 
@@ -2563,6 +2573,7 @@ FirebaseDatabase.getInstance().getReference().child("Post_Scripture").addListene
 
 
     private void DisplayPhotoInPublic() {
+
 
         Query postphotore = FirebaseDatabase.getInstance().getReference().child("Post_photos_public").orderByChild("Counter");
         FirebaseRecyclerOptions<PostPhoto> options = new FirebaseRecyclerOptions.Builder<PostPhoto>()
@@ -2583,6 +2594,7 @@ FirebaseDatabase.getInstance().getReference().child("Post_Scripture").addListene
                 postmodes = model.getPostmode();
                 final MetaData[] data = new MetaData[1];
                 DatabaseUserId = model.getUserid();
+
                 if (model.getPostmode().equals("link")) {
                     holder.setName(model.getName());
                     holder.setChurch(model.getChurch());
@@ -3705,12 +3717,60 @@ FirebaseDatabase.getInstance().getReference().child("Post_Scripture").addListene
                         startActivity(clickPost);
                     }
                 });
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent clickPost = new Intent(getContext(), CommentsActivity.class);
+                        clickPost.putExtra("PostKey",PostKey);
+                        clickPost.putExtra("DatabaseUserId",model.getUserid());
+                        clickPost.putExtra("name",model.getName());
+                        clickPost.putExtra("profile",model.getProfileImage());
+                        clickPost.putExtra("postmode",model.getPostmode());
+                        clickPost.putExtra("postmode",model.getPostmode());
+                        clickPost.putExtra("postphoto",model.getPostImage());
+                        if(model.getPostmode().equals("text")){
+                            clickPost.putExtra("description",model.getDescription());
+                        }
+                        if(model.getPostmode().equals("link")){
+                            clickPost.putExtra("link",model.getLink());
+                        }
+                        if(model.getPostmode().equals("scripture")){
+                            clickPost.putExtra("scriptbk",model.getScriptureBook());
+                            clickPost.putExtra("scriptcnt",model.getScriptureContent());
+                        }
+                        if(model.getPostmode().equals("advertwithtextandimage")){
+                            clickPost.putExtra("description",model.getDescription());
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        if(model.getPostmode().equals("advertwithphotoonly")){
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        if(model.getPostmode().equals("advertwithtextonly")){
+                            clickPost.putExtra("description",model.getDescription());
+                        }
+                        if(model.getPostmode().equals("photowithtext")){
+                            clickPost.putExtra("description",model.getDescription());
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        if(model.getPostmode().equals("text")){
+                            clickPost.putExtra("testimonytext",model.getDescription());
+                        }
+                        if(model.getPostmode().equals("testimonyphoto")){
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        if(model.getPostmode().equals("testimonyphotoandtext")){
+                            clickPost.putExtra("description",model.getDescription());
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        startActivity(clickPost);
+                    }
+                });
                 holder.comment.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent commentIntent = new Intent(getContext(), CommentsActivity.class);
                         commentIntent.putExtra("PostKey",PostKey);
-
 
                         String post = PostKey;
                         commentIntent.putExtra("postmode",model.getPostmode());
@@ -4003,10 +4063,12 @@ FirebaseDatabase.getInstance().getReference().child("Post_Scripture").addListene
         };
         firebaseRecyclerAdapter.startListening();
         progressBar.setVisibility(View.GONE);
+        shimmerFramelayout.stopShimmer();
+        shimmerFramelayout.setVisibility(View.GONE);
+        nestedScrollView.setVisibility(View.VISIBLE);
         recycler_post.setAdapter(firebaseRecyclerAdapter);
 
     }
-
 
 
     private void menuClicked() {

@@ -8,7 +8,23 @@
     android:layout_height="match_parent"
     android:background="#F5F8FA"
     tools:context=".ui.home.HomeFragment">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shimmer">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout ="@layout/shimmer_layout"/>
+            <include layout ="@layout/shimmer_layout"/>
+            <include layout ="@layout/shimmer_layout"/>
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscroll"
+        android:visibility="gone"
         android:background="#F5F8FA"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

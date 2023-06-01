@@ -219,7 +219,7 @@
     android:layout_marginEnd="10dp"
     ads:cardCornerRadius="10dp"
     ads:cardElevation="10dp"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <com.google.android.exoplayer2.ui.PlayerView
         android:visibility="gone"

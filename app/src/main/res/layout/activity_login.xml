@@ -43,7 +43,6 @@
         android:layout_height="250dp"/>
     <TextView
         android:layout_marginStart="-50dp"
-        android:layout_marginLeft="-50dp"
         android:textStyle="bold"
         android:fontFamily="@font/helvetica_neue"
         android:gravity="center_vertical"
@@ -117,7 +116,7 @@
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
+                            android:layout_marginLeft="15dp"
                             app:passwordToggleEnabled="true">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -163,7 +162,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="| Register Here"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/colorPrimary" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -186,7 +185,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="| Reset Here"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/colorPrimary" />
 
                 </LinearLayout>
                 <LinearLayout

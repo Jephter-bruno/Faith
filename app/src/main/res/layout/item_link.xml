@@ -15,7 +15,7 @@
     android:baselineAligned="false"
     android:cropToPadding="true"
     android:scaleType="centerInside"
-    android:src="@drawable/logos"
+    android:src="@drawable/jesuss"
     android:id="@+id/linkimage"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"/>

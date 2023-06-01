@@ -4,8 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card"
     android:orientation="vertical"
-    android:layout_marginBottom="5dp"
     android:background="#F5F8FA"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    app:cardElevation="10dp"
+    app:cardBackgroundColor="#F5F8FA"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
@@ -31,7 +37,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
-                   />
+                    />
 
                 <LinearLayout
                     android:id="@+id/comsssss"
@@ -47,18 +53,18 @@
                         android:layout_marginLeft="1dp"
                         android:orientation="vertical">
 
-                   <LinearLayout
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content">
-                       <TextView
-                           android:textSize="16sp"
-                           android:textColor="#233361"
-                           android:id="@+id/name"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:text="Jane Doe"
-                           />
-                   </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="16sp"
+                                android:textColor="#233361"
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jane Doe"
+                                />
+                        </LinearLayout>
 
                         <TextView
                             android:visibility="gone"
@@ -78,7 +84,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=" Meswondo Faith Church"
-                           />
+                            />
                         <LinearLayout
                             android:gravity="end"
                             android:layout_gravity="end"
@@ -219,7 +225,7 @@
                             android:layout_height="wrap_content"/>
                         <TextView
                             android:textColor="#33353E"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
                             android:text="from"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -262,7 +268,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <LinearLayout
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:orientation="horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
@@ -274,7 +280,7 @@
                             android:layout_height="wrap_content"/>
                         <TextView
 
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
                             android:text="from"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -320,8 +326,6 @@
             </io.github.ponnamkarthik.richlinkpreview.RichLinkViewSkype>
             <androidx.cardview.widget.CardView
                 app:cardElevation="3dp"
-                android:layout_marginEnd="2dp"
-                android:layout_marginStart="2dp"
                 app:cardCornerRadius="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -338,22 +342,22 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-    app:cardCornerRadius="10dp"
-    app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
                 android:layout_gravity="center"
-    android:layout_marginStart="5dp"
-    android:layout_marginEnd="5dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <com.google.android.exoplayer2.ui.PlayerView
-        android:id="@+id/videoview"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:resize_mode="fit"
-        app:use_controller="true" />
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/videoview"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:resize_mode="fit"
+                    app:use_controller="true" />
 
-</androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -370,7 +374,7 @@
                     <ImageView
                         android:id="@+id/image"
                         android:layout_width="100dp"
-                        android:src="@drawable/download"
+                        android:src="@drawable/user"
                         android:layout_height="100dp"/>
 
                 </LinearLayout>
@@ -509,22 +513,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="15dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <LinearLayout
 
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginStart="1dp"
                     android:id="@+id/like"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:orientation="horizontal">
                     <ImageButton
                         android:id="@+id/liked"
-                        android:layout_width="27dp"
+                        android:layout_width="48dp"
                         android:layout_height="match_parent"
                         android:backgroundTint="@android:color/transparent"
                         android:src="@drawable/like"
@@ -533,19 +537,19 @@
 
                     <TextView
                         android:textColor="#33353E"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginEnd="5dp"
                         android:text="21 Likes"
                         android:textStyle="bold"
-                        android:textSize="12sp"
+                        android:textSize="14sp"
                         android:id="@+id/displayNolikes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                      />
+                        />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="1dp"
                     android:id="@+id/comment"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
@@ -553,19 +557,18 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-
-                        android:layout_width="27dp"
+                        android:layout_width="48dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:backgroundTint="@android:color/transparent"
                         android:src="@drawable/comment" />
 
                     <TextView
-                        android:textColor="#33353E"
-                        android:layout_marginEnd="10dp"
-                        android:text="51 comments"
                         android:textStyle="bold"
-                        android:textSize="12sp"
+                        android:textColor="#33353E"
+                        android:layout_marginEnd="1dp"
+                        android:text="51 comments"
+                        android:textSize="14sp"
                         android:id="@+id/displayNocomment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -578,7 +581,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:layout_width="27dp"
+                        android:layout_width="48dp"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/transparent"
                         android:src="@drawable/ic_baseline_share_24"
@@ -586,9 +589,9 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:layout_marginEnd="10dp"
-                        android:textSize="12sp"
                         android:textStyle="bold"
+                        android:layout_marginEnd="1dp"
+                        android:textSize="14sp"
                         android:textColor="#33353E"
                         android:text="Share"
                         android:layout_width="wrap_content"
@@ -600,4 +603,6 @@
         </LinearLayout>
 
     </LinearLayout>
+
+</androidx.cardview.widget.CardView>
 </LinearLayout>

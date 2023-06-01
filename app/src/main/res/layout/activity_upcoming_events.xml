@@ -26,7 +26,7 @@
         android:orientation="vertical">
         <androidx.cardview.widget.CardView
             android:layout_marginBottom="-20dp"
-            app:cardBackgroundColor="@color/colorAccent"
+            app:cardBackgroundColor="@color/colorPrimary"
             app:cardElevation="10dp"
             app:cardCornerRadius="10dp"
             android:layout_width="match_parent"
@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content">
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profile"
-                        android:src="@drawable/themartian"
+                        android:src="@drawable/user"
                         android:layout_width="50dp"
                         android:layout_height="50dp"/>
                     <LinearLayout
@@ -102,13 +102,13 @@
                             android:id="@+id/searchbishop"
                             android:drawableStart="@drawable/ic_baseline_search_24"
                             android:textSize="14sp"
-                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
                             android:ems="10"
                             android:background="@drawable/background"
                             android:layout_marginLeft="5dp"
                             android:layout_gravity="center_vertical"
                             android:layout_width="250dp"
-                            android:layout_height="30dp"
+                            android:layout_height="48dp"
                             android:hint="Find Events" />
 
                     </LinearLayout>

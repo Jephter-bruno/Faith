@@ -100,22 +100,33 @@
                         android:layout_height="match_parent">
                         <TextView
                             android:id="@+id/name"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginTop="6dp"
                             android:text="Jane Doe"
                             android:textSize="15sp"
                             android:textStyle="bold"
-                            android:layout_marginBottom="10dp"
                             android:gravity="center"
                             android:textColor="#5C5A5A"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/denominnation"
+
+                            android:text="Faith Ministries"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="1dp"
+                            android:gravity="center"
+                            android:textColor="#5C5A5A"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
                         <TextView
                             android:id="@+id/designation"
                             android:layout_marginTop="2dp"
                             android:text="Member"
                             android:textSize="13sp"
                             android:textStyle="normal"
-                            android:layout_marginBottom="10dp"
+                            android:layout_marginBottom="2dp"
                             android:gravity="center"
                             android:textColor="#5C5A5A"
                             android:layout_width="match_parent"
@@ -126,7 +137,6 @@
                             android:layout_height="1dp"/>
                         <LinearLayout
                             android:orientation="horizontal"
-                            android:weightSum="3"
                             android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
@@ -137,7 +147,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:drawableLeft="@drawable/ic_phone"
+                                    android:drawableLeft="@drawable/baseline_phone_android_24"
                                     android:text="Mobile"
                                     android:gravity="center"
                                     android:layout_gravity="center"
@@ -165,7 +175,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:drawableLeft="@drawable/ic_home"
+                                    android:drawableLeft="@drawable/homes"
 
                                     android:text="Church"
                                     android:layout_gravity="center"
@@ -216,10 +226,7 @@
 
                         </LinearLayout>
 
-
-
                     </LinearLayout>
-
 
                 </androidx.cardview.widget.CardView>
 
@@ -373,7 +380,7 @@
 
             </LinearLayout>
             <TextView
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorPrimary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -713,7 +720,7 @@
                     android:id="@+id/articleview"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
-                    android:background="@color/colorAccent"
+                    android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"/>
 
@@ -745,7 +752,7 @@
                     android:id="@+id/memberview"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
-                    android:background="@color/colorAccent"
+                    android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"/>
 
@@ -776,7 +783,7 @@
                     android:id="@+id/youtubeview"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
-                    android:background="@color/colorAccent"
+                    android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"/>
 

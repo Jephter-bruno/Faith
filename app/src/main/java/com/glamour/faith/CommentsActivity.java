@@ -261,6 +261,7 @@ public class CommentsActivity extends AppCompatActivity {
                         }
 
                         else if(typ.equals("video")){
+
                             String postimages = snapshot.child("postVideo").getValue().toString();
                             String des = snapshot.child("description").getValue().toString();
 
@@ -386,7 +387,7 @@ public class CommentsActivity extends AppCompatActivity {
                         description.setText(des);
                         Glide.with(getApplicationContext()).load(postimage).into(image_view);
                     }
-                    else if(mode.equals("video")){
+                    else if(mode.equals("postVideo")){
                         String postimages = getIntent().getExtras().get("video").toString();
                         String des = getIntent().getExtras().get("description").toString();
 

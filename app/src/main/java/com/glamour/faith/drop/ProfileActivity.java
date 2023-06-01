@@ -948,6 +948,55 @@ public class ProfileActivity extends AppCompatActivity {
 
                     }
                 });
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent clickPost = new Intent(ProfileActivity.this, CommentsActivity.class);
+                        clickPost.putExtra("PostKey",PostKey);
+                        clickPost.putExtra("DatabaseUserId",model.getUserid());
+                        clickPost.putExtra("name",model.getName());
+                        clickPost.putExtra("profile",model.getProfileImage());
+                        clickPost.putExtra("postmode",model.getPostmode());
+                        clickPost.putExtra("postmode",model.getPostmode());
+                        clickPost.putExtra("postphoto",model.getPostImage());
+                        if(model.getPostmode().equals("text")){
+                            clickPost.putExtra("description",model.getDescription());
+                        }
+                        if(model.getPostmode().equals("link")){
+                            clickPost.putExtra("link",model.getLink());
+                        }
+                        if(model.getPostmode().equals("scripture")){
+                            clickPost.putExtra("scriptbk",model.getScriptureBook());
+                            clickPost.putExtra("scriptcnt",model.getScriptureContent());
+                        }
+                        if(model.getPostmode().equals("advertwithtextandimage")){
+                            clickPost.putExtra("description",model.getDescription());
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        if(model.getPostmode().equals("advertwithphotoonly")){
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        if(model.getPostmode().equals("advertwithtextonly")){
+                            clickPost.putExtra("description",model.getDescription());
+                        }
+                        if(model.getPostmode().equals("photowithtext")){
+                            clickPost.putExtra("description",model.getDescription());
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        if(model.getPostmode().equals("text")){
+                            clickPost.putExtra("testimonytext",model.getDescription());
+                        }
+                        if(model.getPostmode().equals("testimonyphoto")){
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        if(model.getPostmode().equals("testimonyphotoandtext")){
+                            clickPost.putExtra("description",model.getDescription());
+                            clickPost.putExtra("postImage",model.getPostImage());
+                        }
+                        startActivity(clickPost);
+                    }
+                });
 
                 holder.like.setOnClickListener(new View.OnClickListener() {
                     @Override

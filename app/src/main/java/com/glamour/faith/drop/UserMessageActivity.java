@@ -156,7 +156,7 @@ public class UserMessageActivity extends AppCompatActivity {
     }
     private void uploadImage(){
         final ProgressDialog progressDialog =new ProgressDialog(UserMessageActivity.this);
-        progressDialog.setMessage("Uploading..");
+        progressDialog.setMessage("Sending Photo..");
         progressDialog.setCanceledOnTouchOutside(true);
         progressDialog.show();
 
