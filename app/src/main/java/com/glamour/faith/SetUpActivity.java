@@ -267,7 +267,7 @@ public class SetUpActivity extends AppCompatActivity  implements
         String gender = spin.getSelectedItem().toString();
         String designation = spinnner3.getSelectedItem().toString();
         String status = spinnner.getSelectedItem().toString();
-        String church = spinnner4.getSelectedItem().toString();
+       /* String church = spinnner4.getSelectedItem().toString();*/
 
         if (gender.equals("Select Gender")) {
             Toast.makeText(SetUpActivity.this, "Please Select your gender", Toast.LENGTH_SHORT).show();
@@ -281,9 +281,7 @@ public class SetUpActivity extends AppCompatActivity  implements
             Toast.makeText(SetUpActivity.this, "Please Enter Your Phone Number", Toast.LENGTH_SHORT).show();
         } else if (status.equals("Select Marital Status")) {
             Toast.makeText(SetUpActivity.this, "Please Select your Marital Status", Toast.LENGTH_SHORT).show();
-        } else if (church.equals("Select Your Church Branch")) {
-            Toast.makeText(SetUpActivity.this, "Please Select your Church Branch", Toast.LENGTH_SHORT).show();
-        } else {
+        }else {
             ProgressDialog progressDialog = new ProgressDialog(this);
             progressDialog.setMessage("Please Wait...");
             progressDialog.show();
@@ -293,7 +291,7 @@ public class SetUpActivity extends AppCompatActivity  implements
             hashMap.put("gender", gender);
             hashMap.put("designation", designation);
             hashMap.put("status", status);
-            hashMap.put("church", church);
+            hashMap.put("church", "default");
             hashMap.put("name", name);
             hashMap.put("phone", phone);
             hashMap.put("dateOfBirth", day);

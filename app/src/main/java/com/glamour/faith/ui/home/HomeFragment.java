@@ -4407,6 +4407,11 @@ FirebaseDatabase.getInstance().getReference().child("Post_Scripture").addListene
 
 }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        DisplayPhotoInPublic();
+    }
 
     @Override
     public void onStart() {
